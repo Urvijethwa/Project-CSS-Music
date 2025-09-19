@@ -1,0 +1,274 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    /* to remove the by default spaces - containt gets puch to the corner*/
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    /* text overflows - content does not fit in the element's padding box */
+    overflow: hidden;
+}
+
+/* styling for all 3 indiviaul box */
+.main{
+    /* to set all the styling for all divs*/
+    display: flex;
+    /* to give the view port height - to main*/
+    height: 100vh;
+    /* space from everywhere */
+    padding: 0.5rem;
+}
+
+.sidebar{
+    background-color: #000;
+    /* styling - can inspect */
+    width: 340px;
+    /* boarder - curving -- 1 rem= 16px*/
+    border-radius: 1rem;  
+    /* space between the sidebar and main */
+    margin-right: 0.5rem;
+
+}
+
+.main-content{
+    background-color: #121212;
+    /* to take all the available space/width after sidebar */
+    flex: 1;
+     /* boarder - curving -- 1 rem= 16px*/
+    border-radius: 1rem; 
+      /*scroll bar - auto = only show when needed*/
+    overflow: auto;
+    /* space away from side bar  */
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+.music-player{
+    background-color: black;
+    /* position fixed at the bottom and can set the height and width*/
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 72px;
+}
+
+/* sidebar */
+a{
+    /* to remove the links underline */
+    text-decoration: none;
+    color: #fff;
+}
+
+/* sidebar - nav */
+.nav{
+    background-color: #121212;
+    /* boarder - curving -- 1 rem= 16px*/
+    border-radius: 1rem; 
+    /* to move them around - same line */
+    display: flex;
+    /* to change the element into row to coloumn  */
+    flex-direction: column;
+    /* to bring the content into center */
+    justify-content: center;
+    height: 100px;
+    /* padding - why in rem? so it makes the website more responsive valid */
+    padding: 0.5rem 0.75rem;
+    
+}
+
+/* side bar - navbar options - for both option to saperate */
+.nav-option{
+    /* 40px */
+    line-height: 2.5rem;
+    /* make the font dull */
+    opacity: 0.75;
+    /* padding from left and right */
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-option:hover{
+    opacity: 1;
+}
+
+.nav-option i {
+    font-size: 1.25rem;
+}
+
+.nav-option a{
+    font-size: 1rem;
+    /* more space from icon */
+    margin-left: 1rem;
+}
+
+/* library styling */
+.library{
+    background-color: #121212;
+    /* curve the border */
+    border-radius: 1rem; 
+    /* height to take rest of the page */
+    height: 100%;
+    /* to get the space from the middle */
+    margin-top: 0.5rem;
+    /* to make the spacing from top right left */
+    padding: 0.5rem 0.75rem;
+}
+
+.options {
+    /* to bring everthing into one line */
+    display: flex;
+    /* to craete the space between the plus and arrow */
+    justify-content: space-between; 
+    /* to vertically align*/
+    align-items: center;
+}
+
+/*  */
+.lib-option img{
+    /* image sizing */
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+/* styling for icons */
+.icons{
+/* to make those icon bigger */
+font-size: 1.25rem;
+display: flex;
+}
+
+.icons i{
+    opacity: 0.7;
+    /* margin to move away from right */
+    margin-right: 1rem;
+}
+
+.icons i:hover{
+    opacity: 1;
+}
+
+/* library box styling */
+.box{
+    background-color: #232323;
+    height: 9rem;
+    /* radius - curve edges*/
+    border-radius: 0.75rem;
+    /* margin from top and right - move the box away from library*//* space between both box */
+    margin: 0.75rem 1.75rem;
+    padding: 0.5rem 1rem;
+}
+
+.box-p1{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.box-p2{
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.badge{
+    background-color: #fff;
+    /* to remove the bydefault border */
+    border: none;
+    border-radius: 100px;
+    /* padding for button - to bring the text into button */
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    /* to give the space to every part of the  */
+    margin-top: 0.5rem;
+    height: 2rem;
+    /* to make the content fit inside the gievn area */
+    width: fit-content;
+}
+
+.dark-badge{
+    background-color: #000;
+    color: #fff;
+}
+
+/* main- sticky nav bar */
+.sticky-nav{
+    /* to tick the navbar */
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    /* vertically center */
+    align-items: center;
+    /* for top space top left and right bottom*/
+    padding: 1rem 0 1rem 0;
+}
+
+.sticky-nav-icons{
+    /* bring the <> away from the left */
+    margin-left: 0.75rem;
+}
+
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sticky-nav-options button{
+    margin-right: 1rem;
+}
+
+.nav-item{
+    /* bring the items into the center */
+    margin-right: 1rem;
+}
+
+/* media queries to remove the forward icon and explore premium button */
+@media (max-width: 1000px){
+    .hide{
+        display: none;
+    }
+}
+
+/* card styling */
+.card{
+    background-color: #232323;
+    width: 150px;
+    border-radius: 0.5rem;
+    /* give padding from all sides */
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.cards-container{
+    /* used because will be having multiple cards */
+    display: flex;
+    /* to bring the playlist to diffrent lines */
+    flex-wrap: wrap;
+}
+
+.card-img{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.card-title{
+    font-weight: 600;
+}
+
+.card-info{
+    font-size: 0.85rem;
+    opacity: 0.5;
+}
+
+.footer{
+    height: 300px;
+    /* bring the boarder line at the end */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line{
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
